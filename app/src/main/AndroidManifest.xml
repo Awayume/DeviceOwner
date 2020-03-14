@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="jp.kokarare1212.device_owner">
+
+    <permission
+        android:name="jp.kokarare1212.permission.INSTALL_PACKAGES"
+        android:description="@string/install_package"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/install_package"
+        android:permissionGroup="jp.kokarare1212.permission-group.MANAGE_PACKAGES"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.DELETE_PACKAGES"
+        android:description="@string/delete_package"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/delete_package"
+        android:permissionGroup="jp.kokarare1212.permission-group.MANAGE_PACKAGES"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.CHANGE_UNINSTALL_BLOCK_STATE"
+        android:description="@string/change_uninstall_block_state"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_uninstall_block_state"
+        android:permissionGroup="jp.kokarare1212.permission-group.UNINSTALL_BLOCK"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.CHANGE_PERMISSION_POLICY"
+        android:description="@string/change_permission_policy"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_permission_policy"
+        android:permissionGroup="jp.kokarare1212.permission-group.PERMISSION_POLICY"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.WRITE_SECURE_SETTINGS"
+        android:description="@string/write_secure_settings"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/write_secure_settings"
+        android:permissionGroup="jp.kokarare1212.permission-group.WRITE_SECURE_SETTINGS"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.WRITE_SETTINGS"
+        android:description="@string/write_settings"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/write_settings"
+        android:permissionGroup="jp.kokarare1212.permission-group.WRITE_SETTINGS"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.SET_PREFERRED_ACTIVITY"
+        android:description="@string/set_preferred_activity"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/set_preferred_activity"
+        android:permissionGroup="jp.kokarare1212.permission-group.PREFERRED_ACTIVITY"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.INSTALL_SYSTEM_UPDATE"
+        android:description="@string/install_system_update"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/install_system_update"
+        android:permissionGroup="jp.kokarare1212.permission-group.SYSTEM_UPDATE"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.REBOOT"
+        android:description="@string/reboot"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/reboot"
+        android:permissionGroup="jp.kokarare1212.permission-group.REBOOT"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.CHANGE_PASSWORD"
+        android:description="@string/change_password"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_password"
+        android:permissionGroup="jp.kokarare1212.permission-group.PASSWORD"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.HIDDEN_APPLICATION"
+        android:description="@string/hidden_application"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/hidden_application"
+        android:permissionGroup="jp.kokarare1212.permission-group.MANAGE_APPLICATION"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.CHANGE_BACKUP_STATE"
+        android:description="@string/change_backup_state"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_backup_state"
+        android:permissionGroup="jp.kokarare1212.permission-group.MANAGE_APPLICATION"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.DISABLE_CAMERA"
+        android:description="@string/disable_camera"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_camera"
+        android:permissionGroup="jp.kokarare1212.permission-group.CAMERA"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.CLEAR_APPLICATION_DATA"
+        android:description="@string/clear_application_data"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/clear_application_data"
+        android:permissionGroup="jp.kokarare1212.permission-group.APPLICATION_DATA"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.DISABLE_STATUS_BAR"
+        android:description="@string/disable_status_bar"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_status_bar"
+        android:permissionGroup="jp.kokarare1212.permission-group.STATUS_BAR"
+        android:protectionLevel="dangerous" />
+    <permission
+        android:name="jp.kokarare1212.permission.DISABLE_KEYGUARD"
+        android:description="@string/disable_keyguard"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_keyguard"
+        android:permissionGroup="jp.kokarare1212.permission-group.KEYGUARD"
+        android:protectionLevel="dangerous" />
+
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.MANAGE_PACKAGES"
+        android:description="@string/manage_package_description"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/manage_package" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.UNINSTALL_BLOCK"
+        android:description="@string/change_uninstall_block_state"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_uninstall_block_state" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.PERMISSION_POLICY"
+        android:description="@string/change_permission_policy"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_permission_policy" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.WRITE_SETTINGS"
+        android:description="@string/write_settings"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/write_settings" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.PREFERRED_ACTIVITY"
+        android:description="@string/set_preferred_activity"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/set_preferred_activity" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.SYSTEM_UPDATE"
+        android:description="@string/install_system_update"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/install_system_update" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.REBOOT"
+        android:description="@string/reboot"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/reboot" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.PASSWORD"
+        android:description="@string/password"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/password" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.MANAGE_APPLICATION"
+        android:description="@string/password"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/password" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.MANAGE_BACKUP"
+        android:description="@string/change_backup_state"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/change_backup_state" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.CAMERA"
+        android:description="@string/disable_camera"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_camera" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.APPLICATION_DATA"
+        android:description="@string/clear_application_data"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/clear_application_data" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.STATUS_BAR"
+        android:description="@string/disable_status_bar"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_status_bar" />
+    <permission-group
+        android:name="jp.kokarare1212.permission-group.KEYGUARD"
+        android:description="@string/disable_keyguard"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/disable_keyguard" />
+
+    <uses-permission
+        android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/device_owner"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/device_owner"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".PackageInstallService"
+            android:permission="jp.kokarare1212.permission.INSTALL_PACKAGES" />
+        <service
+            android:name=".PackageUninstallService"
+            android:permission="jp.kokarare1212.permission.DELETE_PACKAGES" />
+        <service
+            android:name=".PackageUninstallBlockService"
+            android:permission="jp.kokarare1212.permission.CHANGE_UNINSTALL_BLOCK_STATE" />
+        <service
+            android:name=".PermissionPolicyChangeService"
+            android:permission="jp.kokarare1212.permission.CHANGE_PERMISSION_POLICY" />
+        <service
+            android:name=".SecureSettingService"
+            android:permission="jp.kokarare1212.permission.WRITE_SECURE_SETTINGS" />
+        <service
+            android:name=".SettingService"
+            android:permission="jp.kokarare1212.permission.WRITE_SETTINGS" />
+        <service
+            android:name=".PreferredActivityService"
+            android:permission="jp.kokarare1212.permission.SET_PREFERRED_ACTIVITY" />
+        <service
+            android:name=".SystemImageService"
+            android:permission="jp.kokarare1212.permission.INSTALL_SYSTEM_UPDATE" />
+        <service
+            android:name=".RebootService"
+            android:permission="jp.kokarare1212.permission.REBOOT" />
+        <service
+            android:name=".PasswordService"
+            android:permission="jp.kokarare1212.permission.CHANGE_PASSWORD" />
+        <service
+            android:name=".ApplicationHiddenService"
+            android:permission="jp.kokarare1212.permission.HIDDEN_APPLICATION" />
+        <service
+            android:name=".BackupService"
+            android:permission="jp.kokarare1212.permission.CHANGE_BACKUP_STATE" />
+        <service
+            android:name=".CameraService"
+            android:permission="jp.kokarare1212.permission.DISABLE_CAMERA" />
+        <service
+            android:name=".ApplicationDataService"
+            android:permission="jp.kokarare1212.permission.CLEAR_APPLICATION_DATA" />
+        <service
+            android:name=".StatusBarService"
+            android:permission="jp.kokarare1212.permission.DISABLE_STATUS_BAR" />
+        <service
+            android:name=".KeyGuardService"
+            android:permission="jp.kokarare1212.permission.DISABLE_KEYGUARD" />
+
+        <receiver
+            android:name=".DeviceOwnerReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/admin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

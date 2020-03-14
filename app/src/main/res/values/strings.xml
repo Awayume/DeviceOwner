@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">DeviceOwner</string>
+    <string name="install_package">パッケージのインストール</string>
+    <string name="delete_package">パッケージの削除</string>
+    <string name="change_uninstall_block_state">アンインストールブロックの変更</string>
+    <string name="change_permission_policy">パーミッションポリシーの変更</string>
+    <string name="write_secure_settings">セキュリティ設定の変更</string>
+    <string name="write_settings">設定の変更</string>
+    <string name="set_preferred_activity">規定の変更</string>
+    <string name="install_system_update">システムアップデートのインストール</string>
+    <string name="reboot">再起動</string>
+    <string name="password">パスワードの変更</string>
+    <string name="change_password">パスワードの変更</string>
+    <string name="hidden_application">アプリの無効化</string>
+    <string name="change_backup_state">バックアップの管理</string>
+    <string name="disable_camera">カメラの管理</string>
+    <string name="disable_status_bar">ステータスバーの管理</string>
+    <string name="manage_package">パッケージの管理</string>
+    <string name="disable_keyguard">キーガードの管理</string>
+    <string name="clear_application_data">アプリケーションのデータ削除</string>
+    <string name="manage_package_description">パッケージの管理（インストール・削除）</string>
+    <string name="disable">無効化</string>
+</resources>
